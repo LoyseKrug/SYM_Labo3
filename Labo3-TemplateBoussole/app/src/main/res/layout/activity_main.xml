@@ -18,11 +18,6 @@
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="259dp"
             tools:layout_editor_absoluteX="148dp" android:id="@+id/btn_IBeacon"/>
     <Button
-            android:text="Compass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="259dp"
-            tools:layout_editor_absoluteX="148dp" android:id="@+id/btn_Compass"/>
-    <Button
             android:text="Capteurs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="336dp"

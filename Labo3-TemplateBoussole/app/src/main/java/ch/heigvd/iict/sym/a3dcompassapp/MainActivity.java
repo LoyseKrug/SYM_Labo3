@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
     private Button nfc_qr;
     private Button iBeacon;
     private Button captors;
-    private Button compass;
 
 
     @Override
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         nfc_qr = (Button) findViewById(R.id.btn_NFCandQRActivity);
         iBeacon = (Button) findViewById(R.id.btn_IBeacon);
         captors = (Button) findViewById(R.id.btn_Captors);
-        compass = (Button) findViewById(R.id.btn_Compass);
 
         nfc_qr.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -43,15 +41,7 @@ public class MainActivity extends AppCompatActivity {
         captors.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //Intent intent = new Intent(MainActivity.this, .class); // TODO: mettre le nom de la classe gérant les iBeacon
-                //startActivity(intent);
-            }
-        });
-
-        compass.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, CompassActivity.class);
+                Intent intent = new Intent(MainActivity.this, CompassActivity.class); // TODO: mettre le nom de la classe gérant les iBeacon
                 startActivity(intent);
             }
         });
