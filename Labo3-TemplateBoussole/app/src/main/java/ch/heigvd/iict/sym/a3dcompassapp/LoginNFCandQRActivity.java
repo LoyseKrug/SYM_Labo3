@@ -10,7 +10,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class LoginNFCActivity extends AppCompatActivity {
+public class LoginNFCandQRActivity extends AppCompatActivity {
 
     public static final String TAG = "Error";
 

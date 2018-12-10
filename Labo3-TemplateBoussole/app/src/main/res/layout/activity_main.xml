@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
 
     <Button
-            android:text="NFC"
-            android:layout_width="wrap_content"
+            android:text="NFC / QR"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="113dp"
-            tools:layout_editor_absoluteX="148dp" android:id="@+id/toNFCActivity"/>
-    <Button
-            android:text="code barre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="185dp"
-            tools:layout_editor_absoluteX="139dp" android:id="@+id/toBarCodeActivity"/>
+            tools:layout_editor_absoluteX="148dp" android:id="@+id/btn_NFCandQRActivity"/>
     <Button
             android:text="iBeacon"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="259dp"
-            tools:layout_editor_absoluteX="148dp" android:id="@+id/toIBeacon"/>
+            tools:layout_editor_absoluteX="148dp" android:id="@+id/btn_IBeacon"/>
     <Button
             android:text="Capteurs"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="336dp"
-            tools:layout_editor_absoluteX="145dp" android:id="@+id/toCaptors"/>
-</android.support.constraint.ConstraintLayout>
+            tools:layout_editor_absoluteX="145dp" android:id="@+id/btn_Captors"/>
+</LinearLayout>
