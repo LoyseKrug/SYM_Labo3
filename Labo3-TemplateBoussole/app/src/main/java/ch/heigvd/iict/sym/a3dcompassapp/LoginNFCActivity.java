@@ -22,11 +22,10 @@ public class LoginNFCActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_nfc);
+        setContentView(R.layout.activity_login_nfc_qr);
 
         login = (EditText) findViewById(R.id.editText_login);
         password = (EditText) findViewById(R.id.editText_password);
-        connexion = (Button) findViewById(R.id.button_connexion);
     }
 
 

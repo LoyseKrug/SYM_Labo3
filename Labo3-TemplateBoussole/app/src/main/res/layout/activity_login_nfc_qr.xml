@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp">
+        <TextView
+                android:text="Identifiant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="95dp"
+                tools:layout_editor_absoluteX="16dp" android:id="@+id/login_label" android:textStyle="bold"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                tools:layout_editor_absoluteY="123dp" tools:layout_editor_absoluteX="16dp"
+                android:id="@+id/editText_login"
+        />
+        <TextView
+                android:text="Mot-de-passe"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" tools:layout_editor_absoluteY="184dp"
+                tools:layout_editor_absoluteX="16dp" android:id="@+id/password_label" android:textStyle="bold"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                tools:layout_editor_absoluteY="204dp" tools:layout_editor_absoluteX="16dp"
+                android:id="@+id/editText_password"/>
+        <Switch
+                android:text="Deuxième validation"
+                android:layout_width="match_parent"
+                android:textOn="NFC"
+                android:textOff="QR Code"
+                android:layout_height="wrap_content" android:id="@+id/switch_tech_login"
+
+                android:showText="true" android:checked="false" tools:checked="false" android:splitTrack="false"
+        />
+        <TextView
+                android:text="Veuillez valider votre identité avec votre tag nfc ou votre QR Code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView_Info"/>
+    </LinearLayout>
+</RelativeLayout>
