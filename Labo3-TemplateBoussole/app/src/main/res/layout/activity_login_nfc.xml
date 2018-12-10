@@ -16,7 +16,7 @@
             android:text="Mot-de-passe"
             android:layout_width="123dp"
             android:layout_height="20dp" tools:layout_editor_absoluteY="184dp"
-            tools:layout_editor_absoluteX="16dp" android:id="@+id/ password_label" android:textStyle="bold"/>
+            tools:layout_editor_absoluteX="16dp" android:id="@+id/password_label" android:textStyle="bold"/>
     <Button
             android:text="connexion"
             android:layout_width="wrap_content"
@@ -44,6 +44,6 @@
             android:textStyle="bold"/>
     <ImageView
             android:layout_width="114dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/NFC" tools:layout_editor_absoluteY="372dp"
+            android:layout_height="134dp" app:srcCompat="@drawable/nfc" tools:layout_editor_absoluteY="372dp"
             tools:layout_editor_absoluteX="135dp" android:id="@+id/imageView"/>
 </android.support.constraint.ConstraintLayout>
