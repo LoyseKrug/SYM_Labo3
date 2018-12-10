@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginNFCandQRActivity">
+        </activity>
         <activity android:name=".IBeaconActivity">
         </activity>
         <activity
