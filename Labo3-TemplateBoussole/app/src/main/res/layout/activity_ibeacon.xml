@@ -22,7 +22,6 @@
                     android:layout_height="63dp" android:id="@+id/textView3" android:textStyle="bold"
                     android:paddingTop="20dp"/>
             <TextView
-                    android:text=""
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" tools:layout_editor_absoluteY="14dp"
                     tools:layout_editor_absoluteX="10dp" android:id="@+id/beaconsList"
