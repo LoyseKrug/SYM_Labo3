@@ -7,4 +7,27 @@
         android:layout_height="match_parent"
         tools:context=".IBeaconActivity">
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp">
+            <TextView
+                    android:text="List of Beacons"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp" android:id="@+id/textView3" android:textStyle="bold"
+                    android:paddingTop="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" tools:layout_editor_absoluteY="14dp"
+                    tools:layout_editor_absoluteX="10dp" android:id="@+id/beaconsList"
+                    android:scrollbars="vertical"/>
+        </LinearLayout>
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>

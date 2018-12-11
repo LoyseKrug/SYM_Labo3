@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         iBeacon.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //Intent intent = new Intent(MainActivity.this, .class); // TODO: mettre le nom de la classe gérant les iBeacon
-                //startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, IBeaconActivity.class);
+                startActivity(intent);
             }
         });
 
