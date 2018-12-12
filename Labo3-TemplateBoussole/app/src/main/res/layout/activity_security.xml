@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_security"/>
+        <Button
+                android:text="Max Security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_maxSecurity"/>
+        <Button
+                android:text="Medium Security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_mediumSecurity"/>
+        <Button
+                android:text="Min Security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_minSecurity"/>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:clickable="true"
+                    android:onClick="handleClickNFC"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" android:src="@drawable/nfc"
+                    android:id="@+id/imageView_nfc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_qrcode"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            <ImageView
+                    android:clickable="true"
+                    android:onClick="handleClickQR"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent" android:src="@drawable/qrcode"
+                    android:id="@+id/imageView_qrcode"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView_nfc"
+                    app:layout_constraintStart_toStartOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
