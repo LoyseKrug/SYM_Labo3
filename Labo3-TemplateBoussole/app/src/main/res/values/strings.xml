@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Labo3 - 3D Compass template</string>
+    <string name="app_name">Labo3 - Environement Data </string>
+    <string name="permission_granted">Permission to search for iBeacons granted!</string>
+    <string name="permission_denied">Localisation permission is needed to find iBeacons</string>
 </resources>
