@@ -20,8 +20,8 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
     private GLSurfaceView   m3DView         = null;
 
     private SensorManager mSensorManager;
-    private Sensor mAccelerometer;
-    private Sensor mGeomagnetic;
+    private Sensor mAccelerometer; // Sensor pour l'accéléromètre
+    private Sensor mGeomagnetic;   // Sensor pour les données magnétique
 
     private float[] rotationMatrix = new float[16];
     private float[] geomagnetic;
@@ -47,6 +47,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         //init opengl surface view
         this.m3DView.setRenderer(this.opglr);
 
+        // Enregistrement des Sensors
         mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mGeomagnetic = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
@@ -55,23 +56,27 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
 
     protected void onResume() {
         super.onResume();
+        /** Ajout des Listener pour les sensors ***/
         mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_GAME);
         mSensorManager.registerListener(this, mGeomagnetic, SensorManager.SENSOR_DELAY_GAME);
     }
 
     protected void onPause() {
         super.onPause();
+        /** Enlever les Listener des sensors **/
         mSensorManager.unregisterListener(this);
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
+        /** récupéré les données des sensors **/
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             gravity = event.values;
         } else if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD){
             geomagnetic = event.values;
         }
 
+        /** Mettre à jour la boussole avec les nouvelles données **/
         if(gravity != null && geomagnetic != null){
             SensorManager.getRotationMatrix(rotationMatrix, null, gravity, geomagnetic);
             rotationMatrix = this.opglr.swapRotMatrix(rotationMatrix);
