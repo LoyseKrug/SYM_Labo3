@@ -1,16 +1,31 @@
 package ch.heigvd.iict.sym.a3dcompassapp;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.opengl.GLSurfaceView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class CompassActivity extends AppCompatActivity {
+/**
+ * Source: https://code.tutsplus.com/tutorials/using-the-accelerometer-on-android--mobile-22125
+ */
+public class CompassActivity extends AppCompatActivity implements SensorEventListener {
 
     //opengl
     private OpenGLRenderer  opglr           = null;
     private GLSurfaceView   m3DView         = null;
+
+    private SensorManager mSensorManager;
+    private Sensor mAccelerometer;
+    private Sensor mGeomagnetic;
+
+    private float[] rotationMatrix = new float[16];
+    private float[] geomagnetic;
+    private float[] gravity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +47,38 @@ public class CompassActivity extends AppCompatActivity {
         //init opengl surface view
         this.m3DView.setRenderer(this.opglr);
 
+        mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mGeomagnetic = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+
+    }
+
+    protected void onResume() {
+        super.onResume();
+        mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_GAME);
+        mSensorManager.registerListener(this, mGeomagnetic, SensorManager.SENSOR_DELAY_GAME);
+    }
+
+    protected void onPause() {
+        super.onPause();
+        mSensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            gravity = event.values;
+        } else if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD){
+            geomagnetic = event.values;
+        }
+
+        if(gravity != null && geomagnetic != null){
+            SensorManager.getRotationMatrix(rotationMatrix, null, gravity, geomagnetic);
+            rotationMatrix = this.opglr.swapRotMatrix(rotationMatrix);
+        }
+    }
+
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
     /* TODO */
@@ -40,6 +87,6 @@ public class CompassActivity extends AppCompatActivity {
     //  this.opglr.swapRotMatrix()
     // with the 4x4 rotation matrix, everytime a new matrix is computed
     // more information on rotation matrix can be found on-line:
-    // https://developer.android.com/reference/android/hardware/SensorManager.html#getRotationMatrix(float[],%20float[],%20float[],%20float[])
+        // https://developer.android.com/reference/android/hardware/SensorManager.html#getRotationMatrix(float[],%20float[],%20float[],%20float[])
 
 }
