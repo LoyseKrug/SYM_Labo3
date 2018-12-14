@@ -106,7 +106,7 @@ public class IBeaconActivity extends AppCompatActivity implements BeaconConsumer
                 for(Beacon b : collection){
                     String beaconInfo =
                             "Beacon id: " + b.getId1().toString() +
-                            "RSSI: " + b.getRssi() +
+                            "\nRSSI: " + b.getRssi() +
                             "\nMajor number: " + b.getId2().toString() +
                             "\nMinor number: " + b.getId3().toString() + "\n\n";
 
