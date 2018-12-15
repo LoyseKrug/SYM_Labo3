@@ -38,7 +38,7 @@ La plupart des téléphones possèdes un appareil photo mais pas tous possède l
 
 ### Ludique
 
-Je pense que la partie ludique est très lié au grand publique. Le NFC coute un peu plus cher et est plus difficile à mettre en place.
+Je pense que la partie ludique est très lié au grand publique. Le NFC coute un peu plus cher et est plus difficile à mettre en place. Il est possible de personnaliser les QR codes avec des images au centre.
 
 ### Financier
 
@@ -49,9 +49,20 @@ Le tag NFC à un coût à la fabrication mais on peut changer les valeurs, en av
 ## Question 4.2
 
 ```
-Les iBeacons sont très souvent présentés comme une alternative à NFC. Pouvez-vous commenter cette affirmation en vous basant sur 2-3 exemples de cas d’utilisations (use-cases) concrets (par exemple e-
-paiement, second facteur d’identification, accéder aux horaires à un arrêt de bus, etc.).
+Les iBeacons sont très souvent présentés comme une alternative à NFC. Pouvez-vous commenter cette affirmation en vous basant sur 2-3 exemples de cas d’utilisations (use-cases) concrets (par exemple e-paiement, second facteur d’identification, accéder aux horaires à un arrêt de bus, etc.).
 ```
+
+#### e-paiements
+
+Le principe bien des e-paiements avec NFC c'est de pouvoir approcher sa carte ou son natel du lecteur à la caisse et de faire le paiment, c'est pratique et rapide. Les iBeacons, de part leur portée ferait probablement payer le client 3 personne derrière nous ou alors demanderaient une confirmation depuis le téléphonne ce qui enlève une partie de l'intérêt du paiment sans contact. 
+
+#### Arrêts de bus
+
+Le iBeacon permettent de diffuser l'information à touts les personnes sur l'arrêt de bus en même temps alors que le NFC demandera a chaque passager d'approcher leur natel individuellement. Pour le commun des arrêts de bus ça ne posera pas de problème mais si c'est un arrêt près d'une gare ou a une heure de pointe il risque d'y avoir une file d'attente.
+
+#### 2-factor auth
+
+
 
 
 
