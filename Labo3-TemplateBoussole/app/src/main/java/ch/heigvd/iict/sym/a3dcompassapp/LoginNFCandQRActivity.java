@@ -1,3 +1,15 @@
+/**
+ * Authors: Adrien Allemand, James Smith, Loyse Krug
+ *
+ * Date: 16.12.2018
+ *
+ * Objective: In this activity, the user can login with a user name and a password (username: A, password: a)
+ * and using a NFC tag, or a QRcode to access to the to the security activity.
+ *
+ * Sources: http://mobile.tutsplus.com/tutorials/android/reading-nfc-tags-with-android/
+ *          https://github.com/zxing/zxing/wiki/Scanning-Via-Intent
+ *          https://github.com/journeyapps/zxing-android-embedded
+ */
 package ch.heigvd.iict.sym.a3dcompassapp;
 
 import android.content.Intent;

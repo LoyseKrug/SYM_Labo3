@@ -1,3 +1,13 @@
+/**
+ * Authors: Adrien Allemand, James Smith, Loyse Krug
+ *
+ * Date: 16.12.2018
+ *
+ * Objective: Abstract class handling NFC and QR
+ *
+ * Source: https://code.tutsplus.com/tutorials/reading-nfc-tags-with-android--mobile-17278
+ */
+
 package ch.heigvd.iict.sym.a3dcompassapp;
 
 import android.app.PendingIntent;
@@ -21,8 +31,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
 /**
- * Abstract class handling NFC and QR
- * Source: https://code.tutsplus.com/tutorials/reading-nfc-tags-with-android--mobile-17278
+ * @class Abstract class handling NFC and QR
  */
 public abstract class NFCandQRActivity extends AppCompatActivity {
     private NfcAdapter mNfcAdapter = null; // NFC Adapter

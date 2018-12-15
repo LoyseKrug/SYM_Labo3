@@ -1,9 +1,10 @@
 /**
  * Authors: Adrien Allemand, James Smith, Loyse Krug
  *
- * Date:
+ * Date: 16.12.2018
  *
- * Objectives:
+ * Objectives:  This activity shows the list of all the beacons active close to the phone. The list is regularly
+ *              updated
  *
  *
  * Sources:

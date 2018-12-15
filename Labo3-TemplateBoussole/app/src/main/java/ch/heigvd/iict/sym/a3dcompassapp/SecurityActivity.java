@@ -1,3 +1,16 @@
+/**
+ * Authors: Adrien Allemand, James Smith, Loyse Krug
+ *
+ * Objective: class that shows the user his level of security when he's connected.
+ * The level of security diminishes with time  when the user is connected and can
+ * be maximized with a new authentification.
+ * At the beginning the user has access to three buttons:
+ * - high security
+ * - medium security
+ * - low security
+ * And with  the time, he loses access to high security, then to medium security.
+ */
+
 package ch.heigvd.iict.sym.a3dcompassapp;
 
 import android.content.Context;

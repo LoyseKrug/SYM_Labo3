@@ -1,3 +1,14 @@
+/**
+ * Authors: Adrien Allemand, James Smith, Loyse Krug
+ *
+ * Date: 16.12.2018
+ *
+ * Objectives: In this activity, the user can see a compass indicating the north using the sensors captors of the
+ * phone.
+ *
+ * Source: https://code.tutsplus.com/tutorials/using-the-accelerometer-on-android--mobile-22125
+ */
+
 package ch.heigvd.iict.sym.a3dcompassapp;
 
 import android.hardware.Sensor;
@@ -10,9 +21,6 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-/**
- * Source: https://code.tutsplus.com/tutorials/using-the-accelerometer-on-android--mobile-22125
- */
 public class CompassActivity extends AppCompatActivity implements SensorEventListener {
 
     //opengl

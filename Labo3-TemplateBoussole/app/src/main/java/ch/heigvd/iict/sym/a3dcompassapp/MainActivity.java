@@ -1,3 +1,17 @@
+/**
+ * Authors: Adrien Allemand, James Smith, Loyse Krug
+ *
+ * Date: 16.12.2018
+ *
+ * Objective: This activity is the center point that gives access to all the other activities.
+ *            The user will be able to access:
+ *            - NFC or QRcode connetion system
+ *            - an iBeacon captor
+ *            - a compass
+ *
+ * Sources: -
+ */
+
 package ch.heigvd.iict.sym.a3dcompassapp;
 
 import android.content.Intent;
