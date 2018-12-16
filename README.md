@@ -11,7 +11,7 @@ A partir de l’API Android concernant les tags NFC4, pouvez-vous imaginer une a
 
 Les tags NFC ne possèdent pas de protéction contre le clonage, ils sont concu pour être lu librement, ainsi il est aisé de récupérer des informations d'un tag NFC et de les dupliquer pour les utiliser ailleurs.
 
-Les tags NFC possèdent bien un identifiant unique, mais pourrait permettre de les authentifier, mais cela n'empêche en rien d'extraitre quand même toutes les données du tag. Il existe même du hardware spécialisé capable de modifier ces identifiants uniques.
+Les tags NFC possèdent un identifiant unique qui pourrait permettre de les authentifier, mais cela n'empêche en rien d'extraitre quand même toutes les données du tag. Il existe même du hardware spécialisé capable de modifier ces identifiants uniques.
 
 Il y a eu des tentatives d'ajouter des signatures digitales avec l'identifiant unique pour doubler la sécuriter, mais, de nouveau, un attaquant pourra se débrouiller pour reproduire la signature en en faisant une copie.
 
@@ -40,7 +40,7 @@ Comparer la technologie à codes-barres et la technologie NFC, du point de vue d
 
 Pour des questions d'authentifications, s'il y a moyen d'utiliser des tags NFC, ceux-ci seront probablement plus appropriés. En effet, la posséssion d'un tag NFC peut déjà fournir une part de sécurisation (il sera néanmoins bien de l'associer à une authetifiaction par mot-de-passe, en cas de vol). Le NFC est facilement mis au porte clé ou dans le porte monnaie et nécessite une proximité pour pouvoir l'utiliser. 
 
-Un QRcode, quant à lui, pourra être lu par n'importe qui possèdant une  application capable de le lire et ne fourni donc pas de sécurisaté supplémentaire. De plus, un QRcode qui s'abime peut devenir illisible et ainsi empêcher des authentifications justifiées.  
+Un QRcode, quant à lui, pourra être lu par n'importe qui possèdant une  application capable de le lire et ne fourni donc pas de sécurisaté supplémentaire. De plus, un QRcode qui s'abime peut devenir illisible et ainsi empêcher des authentifications légitimes.  
 
 #### Grand public
 
@@ -54,7 +54,7 @@ Pour tout ce qui est information du grand publique et activité ludique, le QRco
 
 #### Financier
 
-Le QR Code est à usage unique mais coute le coût d'une impression. Ce qui est un prix à négliger. Il est aussi possible de les mettre sur des pages web ce qui le rends gratuit et accéssible depuis partout.
+Le QR Code est à usage unique mais coute le coût d'une impression. Ce qui est un prix négligeable. Il est aussi possible de les mettre sur des pages web ce qui le rends gratuit et accéssible depuis partout.
 
 Le tag NFC à un coût à la fabrication mais on peut changer les valeurs, en avoir plusieurs et l'utiliser pour différentes opérations (SwissPass).
 
@@ -74,7 +74,7 @@ Source: https://blog.beaconstac.com/2015/12/beacons-vs-nfc-which-payment-technol
 
 #### Arrêts de bus
 
-Le iBeacon permettent de diffuser l'information à touts les personnes sur l'arrêt de bus en même temps alors que le NFC demandera a chaque passager d'approcher leur natel individuellement. Pour le commun des arrêts de bus ça ne posera pas de problème mais si c'est un arrêt près d'une gare ou a une heure de pointe il risque d'y avoir une file d'attente.
+Le iBeacon permettent de diffuser l'information à touts les personnes sur l'arrêt de bus en même temps alors que le NFC demandera a chaque passager d'approcher leur natel individuellement. Pour le commun des arrêts de bus ça ne posera pas de problème mais si c'est un arrêt près d'une gare a une heure de pointe il risque d'y avoir une file d'attente.
 
 #### 2-factor auth
 
@@ -99,4 +99,4 @@ La cause être qu'il y a beaucoup de perturbation au niveau magnétique autour d
 
 Une façon de résoudre ceci serait de travailler sur des moyennes des données récupéré. Ca éviterais ce tremblement tous en donner des informations précise. 
 
-Il serait aussi possible de limiter la vélocité augulaire maximale de l'aiguille. Cette dernière bougerait alors avec une certaine inertie, mais éviterait davantage les tremblements
+Il serait aussi possible de limiter la vélocité augulaire maximale de l'aiguille. Cette dernière bougerait alors avec une certaine inertie, mais éviterait les tremblements.
